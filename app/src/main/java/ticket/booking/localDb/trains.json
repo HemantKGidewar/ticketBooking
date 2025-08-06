@@ -10,11 +10,12 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "New York": "08:00:00",
-      "Philadelphia": "10:00:00",
-      "Washington DC": "12:00:00"
+      "new york": "08:00:00",
+      "philadelphia": "10:00:00",
+      "washington dc": "12:00:00",
+      "nagoya": "23:00:00"
     },
-    "stations": ["New York", "Philadelphia", "Washington DC"]
+    "stations": ["new york", "philadelphia", "washington dc", "nagoya"]
   },
   {
     "train_id": "TR200",
@@ -27,11 +28,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Los Angeles": "14:00:00",
-      "Bakersfield": "16:00:00",
-      "San Francisco": "18:00:00"
+      "los angeles": "14:00:00",
+      "orlando": "16:00:00",
+      "san francisco": "18:00:00"
     },
-    "stations": ["Los Angeles", "Bakersfield", "San Francisco"]
+    "stations": ["los angeles", "orlando", "san francisco"]
   },
   {
     "train_id": "TR300",
@@ -44,11 +45,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Chicago": "07:00:00",
-      "South Bend": "09:00:00",
-      "Detroit": "11:00:00"
+      "chicago": "07:00:00",
+      "philadelphia": "09:00:00",
+      "detroit": "11:00:00"
     },
-    "stations": ["Chicago", "South Bend", "Detroit"]
+    "stations": ["chicago", "philadelphia", "detroit"]
   },
   {
     "train_id": "TR301",
@@ -61,11 +62,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Detroit": "12:00:00",
-      "Toledo": "14:00:00",
-      "Cleveland": "16:00:00"
+      "philadelphia": "10:00:00",
+      "toledo": "14:00:00",
+      "cleveland": "16:00:00"
     },
-    "stations": ["Detroit", "Toledo", "Cleveland"]
+    "stations": ["philadelphia", "toledo", "cleveland"]
   },
   {
     "train_id": "TR400",
@@ -78,11 +79,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Seattle": "18:30:00",
-      "Tacoma": "19:30:00",
-      "Portland": "21:00:00"
+      "seattle": "18:30:00",
+      "orlando": "19:30:00",
+      "portland": "21:00:00"
     },
-    "stations": ["Seattle", "Tacoma", "Portland"]
+    "stations": ["seattle", "orlando", "portland"]
   },
   {
     "train_id": "TR500",
@@ -95,11 +96,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Miami": "06:00:00",
-      "Fort Lauderdale": "07:30:00",
-      "Orlando": "10:00:00"
+      "miami": "06:00:00",
+      "fort lauderdale": "07:30:00",
+      "orlando": "10:00:00"
     },
-    "stations": ["Miami", "Fort Lauderdale", "Orlando"]
+    "stations": ["miami", "fort lauderdale", "orlando"]
   },
   {
     "train_id": "TR600",
@@ -112,11 +113,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "Tokyo": "08:00:00",
-      "Nagoya": "10:00:00",
-      "Osaka": "12:00:00"
+      "tokyo": "08:00:00",
+      "nagoya": "10:00:00",
+      "osaka": "12:00:00"
     },
-    "stations": ["Tokyo", "Nagoya", "Osaka"]
+    "stations": ["tokyo", "nagoya", "osaka"]
   },
   {
     "train_id": "TR700",
@@ -129,10 +130,11 @@
       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     ],
     "arrival_times": {
-      "London": "07:20:00",
-      "York": "09:40:00",
-      "Edinburgh": "12:00:00"
+      "london": "07:20:00",
+      "york": "09:40:00",
+      "edinburgh": "12:00:00",
+      "nagoya": "14:30:00"
     },
-    "stations": ["London", "York", "Edinburgh"]
+    "stations": ["london", "york", "edinburgh", "nagoya"]
   }
 ]

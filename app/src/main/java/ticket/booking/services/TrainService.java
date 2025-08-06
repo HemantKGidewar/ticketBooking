@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class TrainService {
-    private List<Train> trainList;
-    private static final String TRAIN_PATH = "../localDb/trains.json";
+    private final List<Train> trainList;
+    private static final String TRAIN_PATH = "app/src/main/java/ticket/booking/localDb/trains.json";
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public TrainService() throws IOException {
@@ -18,8 +18,13 @@ public class TrainService {
     }
 
     public List<Train> loadTrains () throws IOException {
+        System.out.println("Loaded");
         File trains = new File(TRAIN_PATH);
-        return objectMapper.readValue(trains, new TypeReference<List<Train>>() {});
+        List<Train> list =  objectMapper.readValue(trains, new TypeReference<List<Train>>() {});
+        if(list.isEmpty()) {
+            System.out.println("No trains found");
+        }
+        return list;
     }
 
     public List<Train> getTrainList(String source, String destination){

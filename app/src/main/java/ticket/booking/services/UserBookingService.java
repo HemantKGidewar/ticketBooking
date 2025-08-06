@@ -22,7 +22,7 @@ public class UserBookingService {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String USERS_PATH = "/Users/hemantkumargidewar/Documents/Java/IRCTC/app/src/main/java/ticket/booking/localDb/users.json";
+    private static final String USERS_PATH = "app/src/main/java/ticket/booking/localDb/users.json";
 
     public UserBookingService(User newUser) throws IOException {
         this.user = newUser;
@@ -31,9 +31,6 @@ public class UserBookingService {
 
     public UserBookingService() throws IOException {
         userList = loadUsers();
-        for(User user : userList) {
-            System.out.println(user.getUserId());
-        }
     }
 
     public List<User> loadUsers() throws IOException {
@@ -49,13 +46,12 @@ public class UserBookingService {
         return foundUser.isPresent();
     }
 
-    public Boolean signUp(User user1){
+    public void signUp(User user1){
         try {
             userList.add((user1));
             saveUserListToFile();
-            return Boolean.TRUE;
         } catch (IOException ex){
-            return Boolean.FALSE;
+            System.out.println("User could not sign up");
         }
     }
 
