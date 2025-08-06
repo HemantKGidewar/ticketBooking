@@ -1,0 +1,271 @@
+[
+  {
+    "name": "Alice Johnson",
+    "user_id": "U001",
+    "password": "pass123",
+    "hashed_password": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "tickets_booked": [
+      {
+        "ticket_id": "T001",
+        "user_id": "U001",
+        "source": "New York",
+        "destination": "Washington DC",
+        "date_of_travel": "2025-09-01T09:00:00Z",
+        "train": {
+          "train_id": "TR100",
+          "train_no": "100A",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "New York": "08:00:00",
+            "Philadelphia": "10:00:00",
+            "Washington DC": "12:00:00"
+          },
+          "stations": ["New York", "Philadelphia", "Washington DC"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bob Smith",
+    "user_id": "U002",
+    "password": "qwerty",
+    "hashed_password": "d8578edf8458ce06fbc5bb76a58c5ca4",
+    "tickets_booked": [
+      {
+        "ticket_id": "T002",
+        "user_id": "U002",
+        "source": "Los Angeles",
+        "destination": "San Francisco",
+        "date_of_travel": "2025-08-20T14:30:00Z",
+        "train": {
+          "train_id": "TR200",
+          "train_no": "200B",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Los Angeles": "14:00:00",
+            "Bakersfield": "16:00:00",
+            "San Francisco": "18:00:00"
+          },
+          "stations": ["Los Angeles", "Bakersfield", "San Francisco"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Carol Lee",
+    "user_id": "U003",
+    "password": "letmein",
+    "hashed_password": "0d107d09f5bbe40cade3de5c71e9e9b7",
+    "tickets_booked": []
+  },
+  {
+    "name": "David Nguyen",
+    "user_id": "U004",
+    "password": "123456",
+    "hashed_password": "e10adc3949ba59abbe56e057f20f883e",
+    "tickets_booked": [
+      {
+        "ticket_id": "T003",
+        "user_id": "U004",
+        "source": "Chicago",
+        "destination": "Detroit",
+        "date_of_travel": "2025-10-05T07:15:00Z",
+        "train": {
+          "train_id": "TR300",
+          "train_no": "300C",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Chicago": "07:00:00",
+            "South Bend": "09:00:00",
+            "Detroit": "11:00:00"
+          },
+          "stations": ["Chicago", "South Bend", "Detroit"]
+        }
+      },
+      {
+        "ticket_id": "T004",
+        "user_id": "U004",
+        "source": "Detroit",
+        "destination": "Cleveland",
+        "date_of_travel": "2025-11-12T12:00:00Z",
+        "train": {
+          "train_id": "TR301",
+          "train_no": "301D",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Detroit": "12:00:00",
+            "Toledo": "14:00:00",
+            "Cleveland": "16:00:00"
+          },
+          "stations": ["Detroit", "Toledo", "Cleveland"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Eva Patel",
+    "user_id": "U005",
+    "password": "password1",
+    "hashed_password": "7c6a180b36896a0a8c02787eeafb0e4c",
+    "tickets_booked": [
+      {
+        "ticket_id": "T005",
+        "user_id": "U005",
+        "source": "Seattle",
+        "destination": "Portland",
+        "date_of_travel": "2025-09-15T18:45:00Z",
+        "train": {
+          "train_id": "TR400",
+          "train_no": "400E",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Seattle": "18:30:00",
+            "Tacoma": "19:30:00",
+            "Portland": "21:00:00"
+          },
+          "stations": ["Seattle", "Tacoma", "Portland"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Frank Müller",
+    "user_id": "U006",
+    "password": "admin123",
+    "hashed_password": "0192023a7bbd73250516f069df18b500",
+    "tickets_booked": []
+  },
+  {
+    "name": "Grace Kim",
+    "user_id": "U007",
+    "password": "welcome",
+    "hashed_password": "5d41402abc4b2a76b9719d911017c592",
+    "tickets_booked": [
+      {
+        "ticket_id": "T006",
+        "user_id": "U007",
+        "source": "Miami",
+        "destination": "Orlando",
+        "date_of_travel": "2025-12-01T06:00:00Z",
+        "train": {
+          "train_id": "TR500",
+          "train_no": "500F",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Miami": "06:00:00",
+            "Fort Lauderdale": "07:30:00",
+            "Orlando": "10:00:00"
+          },
+          "stations": ["Miami", "Fort Lauderdale", "Orlando"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hiro Tanaka",
+    "user_id": "U008",
+    "password": "letmein!",
+    "hashed_password": "6cb75f652a9b52798eb6cf2201057c73",
+    "tickets_booked": [
+      {
+        "ticket_id": "T007",
+        "user_id": "U008",
+        "source": "Tokyo",
+        "destination": "Osaka",
+        "date_of_travel": "2025-08-10T08:00:00Z",
+        "train": {
+          "train_id": "TR600",
+          "train_no": "600G",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "Tokyo": "08:00:00",
+            "Nagoya": "10:00:00",
+            "Osaka": "12:00:00"
+          },
+          "stations": ["Tokyo", "Nagoya", "Osaka"]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Isabella Rossi",
+    "user_id": "U009",
+    "password": "passw0rd",
+    "hashed_password": "3f230640b78d1feb74e38a3a834f13b8",
+    "tickets_booked": []
+  },
+  {
+    "name": "Jack O’Connor",
+    "user_id": "U010",
+    "password": "secret!",
+    "hashed_password": "b2e98ad6f6eb8508dd6a14cfa704bad7",
+    "tickets_booked": [
+      {
+        "ticket_id": "T008",
+        "user_id": "U010",
+        "source": "London",
+        "destination": "Edinburgh",
+        "date_of_travel": "2025-09-30T07:20:00Z",
+        "train": {
+          "train_id": "TR700",
+          "train_no": "700H",
+          "seats": [
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          ],
+          "arrival_times": {
+            "London": "07:20:00",
+            "York": "09:40:00",
+            "Edinburgh": "12:00:00"
+          },
+          "stations": ["London", "York", "Edinburgh"]
+        }
+      }
+    ]
+  }
+]
