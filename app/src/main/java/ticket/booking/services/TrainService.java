@@ -19,14 +19,14 @@ public class TrainService {
     }
 
     public List<Train> loadTrains() throws IOException {
-        System.out.println("Loaded Trains");
+
         File trains = new File(TRAIN_PATH);
         List<Train> list = objectMapper.readValue(trains, new TypeReference<List<Train>>() {
         });
         if (list.isEmpty()) {
             System.out.println("No trains found");
         }
-        System.out.println("Number of total trains : " + list.size());
+
         return list;
     }
 
@@ -66,5 +66,21 @@ public class TrainService {
         saveTrainListToFile();
         System.out.println("Seat booked successfully");
         return Optional.of(selectedTrain);
+    }
+
+    public void removeBookedSeat(Train train, int seatRow, int seatCol) throws IOException {
+        Optional<Train> selectedTrain = trainList.stream().filter(train1 ->
+                train1.getTrainId().equals(train.getTrainId())
+                        && train1.getTrainNo().equals(train.getTrainNo())
+        ).findFirst();
+
+        if (selectedTrain.isEmpty()) {
+            System.out.println("No such train exists !");
+            return;
+        }
+
+        selectedTrain.get().cancelSeat(seatRow, seatCol);
+        saveTrainListToFile();
+        System.out.println("Train seat emptied successfully");
     }
 }

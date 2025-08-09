@@ -15,19 +15,26 @@ public class Ticket {
     private String destination;
     private Date dateOfTravel;
     private Train train;
+    private Integer seatRow;
+    private Integer seatCol;
 
     public Ticket(String ticketId,
                   String userId,
                   String source,
                   String destination,
                   Date dateOfTravel,
-                  Train train) {
+                  Train train,
+                  Integer seatRow,
+                  Integer seatCol
+    ) {
         this.ticketId = ticketId;
         this.userId = userId;
         this.source = source;
         this.destination = destination;
         this.dateOfTravel = dateOfTravel;
         this.train = train;
+        this.seatRow = seatRow;
+        this.seatCol = seatCol;
     }
 
     public Ticket() {
@@ -62,6 +69,14 @@ public class Ticket {
         return train;
     }
 
+    public Integer getSeatRow() {
+        return seatRow;
+    }
+
+    public void setSeatRow(Integer seatRow) {
+        this.seatRow = seatRow;
+    }
+
     public void setTicketId(String ticketId) {
         this.ticketId = ticketId;
     }
@@ -84,5 +99,13 @@ public class Ticket {
 
     public void setTrain(Train train) {
         this.train = train;
+    }
+
+    public Integer getSeatCol() {
+        return seatCol;
+    }
+
+    public void setSeatCol(Integer seatCol) {
+        this.seatCol = seatCol;
     }
 }

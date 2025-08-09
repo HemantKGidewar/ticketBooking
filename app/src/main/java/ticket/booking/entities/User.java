@@ -44,8 +44,8 @@ public class User {
     }
 
     public void printTickets() {
-        for (Ticket ticket : ticketsBooked) {
-            System.out.println(ticket.getTicketInfo());
+        for(int i=0; i<ticketsBooked.size(); i++){
+            System.out.println(i + ". " +  ticketsBooked.get(i).getTicketInfo());
         }
     }
 
@@ -76,4 +76,12 @@ public class User {
     public void addTicket(Ticket ticket) {
         ticketsBooked.add(ticket);
     }
+
+    public void removeTicketFromIndex(int index){
+        if(index < 0 || index >= ticketsBooked.size()) {
+            System.out.println("Index out of bounds; Select a correct one");
+        }
+        ticketsBooked.remove(index);
+    }
+
 }

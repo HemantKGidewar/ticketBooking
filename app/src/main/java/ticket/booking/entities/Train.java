@@ -62,12 +62,12 @@ public class Train {
         this.stations = stations;
     }
 
-    public Boolean bookSeat(Integer seatRow, Integer seatCol) {
-        if (seats.get(seatRow).get(seatCol) == 1) {
-            return Boolean.FALSE;
-        }
+    public void bookSeat(Integer seatRow, Integer seatCol) {
         seats.get(seatRow).set(seatCol, 1);
-        return Boolean.TRUE;
+    }
+
+    public void cancelSeat(Integer seatRow, Integer seatCol) {
+        seats.get(seatRow).set(seatCol, 0);
     }
 
     public void printSeatList() {

@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
+import static ticket.booking.util.UserServiceUtil.readInt;
+
 public class App {
 
     public static void main(String[] args) {
@@ -38,7 +40,7 @@ public class App {
             System.out.println("5. Book a seat");
             System.out.println("6. Cancel my booking");
             System.out.println("7. Exit the App");
-            option = scan.nextInt();
+            option = readInt(scan, "Choose Option (enter a number):");
 
             switch (option) {
                 case 1:
@@ -71,7 +73,7 @@ public class App {
 
                     try {
                         userBookingService = new UserBookingService(userToLogin);
-                        if (userBookingService.loginUser()) {
+                        if (userBookingService.loginUser(nameToLogin, passwordToLogin)) {
                             System.out.println("User logged in");
                         } else {
                             System.out.println("User could not log in");
@@ -83,7 +85,7 @@ public class App {
 
                 case 3:
                     System.out.println("Fetching Bookings");
-                    userBookingService.fetchBooking();
+                    userBookingService.printBookings();
                     break;
 
                 case 4:
@@ -116,18 +118,15 @@ public class App {
                         System.out.println(i + ". " + availableTrains.get(i).getTrainInfo());
                     }
 
-                    System.out.println("Please enter the train number");
-                    int chosenTrainNumber = scan.nextInt();
+                    int chosenTrainNumber = readInt(scan, "Please enter the train number");
                     // proceed booking the train
                     Train chosenTrain = availableTrains.get(chosenTrainNumber);
 
                     System.out.println("Here is the seating arrangement in the train you selected");
                     chosenTrain.printSeatList();
 
-                    System.out.println("Please enter the seat row");
-                    int chosenSeatRow = scan.nextInt();
-                    System.out.println("Please enter the seat column");
-                    int chosenSeatCol = scan.nextInt();
+                    int chosenSeatRow = readInt(scan, "Please enter the seat row");
+                    int chosenSeatCol = readInt(scan, "Please enter the seat column");
 
                     userBookingService.bookTicket(
                             chosenTrain.getTrainNo(),
@@ -137,6 +136,20 @@ public class App {
                             source,
                             destination
                     );
+                    break;
+
+                case 6:
+                    if (!userBookingService.isBookingPresent()) {
+                        System.out.println("No bookings to cancel");
+                        break;
+                    }
+                    System.out.println("Which booking do you want to cancel");
+                    userBookingService.printBookings();
+
+                    int ticketToBeCancelled = readInt(scan, "Enter the booking number to cancel");
+
+                    userBookingService.cancelBooking(ticketToBeCancelled);
+
                     break;
 
                 default:

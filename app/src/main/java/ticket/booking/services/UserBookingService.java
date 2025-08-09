@@ -37,11 +37,17 @@ public class UserBookingService {
         });
     }
 
-    public Boolean loginUser() {
-        Optional<User> foundUser = userList.stream().filter(user1 -> {
-            return user1.getName().equals(user.getName()) && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashedPassword());
-        }).findFirst();
-        return foundUser.isPresent();
+    public boolean loginUser(String username, String password) {
+        Optional<User> foundUser = userList.stream()
+                .filter(u -> u.getName().equals(username) &&
+                        UserServiceUtil.checkPassword(password, u.getHashedPassword()))
+                .findFirst();
+
+        if (foundUser.isPresent()) {
+            user = foundUser.get(); // reference from userList
+            return true;
+        }
+        return false;
     }
 
     public void signUp(User user1) {
@@ -58,17 +64,29 @@ public class UserBookingService {
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(userFile, userList);
     }
 
-    public void fetchBooking() {
+    public void printBookings() {
         user.printTickets();
     }
 
-    public Boolean cancelBooking(String ticketId) {
-        List<Ticket> currentTicketList = user.getTicketsBooked();
-        List<Ticket> newTicketList = currentTicketList.stream().filter(ticket -> !Objects.equals(ticket.getTicketId(), ticketId)).toList();
-        // !Objects.equals() wont throw NullPointException error, thus is safer from simple .equals() comparison
-        user.setTicketsBooked(newTicketList);
+    public void cancelBooking(int ticketIndex) {
+        try {
+            if (ticketIndex < 0 || ticketIndex >= user.getTicketsBooked().size()) {
+                System.out.println("Invalid index of ticket");
+                return;
+            }
+            Ticket userTicket = user.getTicketsBooked().get(ticketIndex);
+            TrainService trainService = new TrainService();
+            trainService.removeBookedSeat(
+                    userTicket.getTrain(),
+                    userTicket.getSeatRow(),
+                    userTicket.getSeatCol());
 
-        return Boolean.TRUE;
+            user.removeTicketFromIndex(ticketIndex);
+            saveUserListToFile();
+            System.out.println("The booking was successfully cancelled");
+        } catch (IOException ex) {
+            System.out.println("The booking could not be cancelled");
+        }
     }
 
     public List<Train> searchTrains(String source, String destination) {
@@ -88,6 +106,11 @@ public class UserBookingService {
                            String destination) {
         // This function books ticket for user from source to destination for a given train
         // For now the function books the seats for the whole journey for the user
+        if (user == null) {
+            System.out.println("No user logged in!");
+            return;
+        }
+
         try {
             TrainService trainService = new TrainService();
             Optional<Train> train = trainService.bookTrainSeats(trainNo, trainId, seatRow, seatCol);
@@ -101,7 +124,9 @@ public class UserBookingService {
                     source,
                     destination,
                     new Date(),
-                    train.get()
+                    train.get(),
+                    seatRow,
+                    seatCol
             );
 
             user.addTicket(ticket);
@@ -110,4 +135,9 @@ public class UserBookingService {
             System.out.println("Something went wrong ! \n Ticket couldn't be booked");
         }
     }
+
+    public Boolean isBookingPresent() {
+        return !user.getTicketsBooked().isEmpty();
+    }
+
 }
