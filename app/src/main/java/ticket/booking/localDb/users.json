@@ -1,1 +1,155 @@
-[{"name":"Alice Johnson","user_id":"U001","password":"pass123","hashed_password":"5f4dcc3b5aa765d61d8327deb882cf99","tickets_booked":[{"ticket_id":"T001","ticket_info":"ticketId : T001, from : null to : null"}]},{"name":"Bob Smith","user_id":"U002","password":"qwerty","hashed_password":"d8578edf8458ce06fbc5bb76a58c5ca4","tickets_booked":[{"ticket_id":"T002","ticket_info":"ticketId : T002, from : null to : null"}]},{"name":"Carol Lee","user_id":"U003","password":"letmein","hashed_password":"0d107d09f5bbe40cade3de5c71e9e9b7","tickets_booked":[]},{"name":"David Nguyen","user_id":"U004","password":"123456","hashed_password":"e10adc3949ba59abbe56e057f20f883e","tickets_booked":[{"ticket_id":"T003","ticket_info":"ticketId : T003, from : null to : null"},{"ticket_id":"T004","ticket_info":"ticketId : T004, from : null to : null"}]},{"name":"Eva Patel","user_id":"U005","password":"password1","hashed_password":"7c6a180b36896a0a8c02787eeafb0e4c","tickets_booked":[{"ticket_id":"T005","ticket_info":"ticketId : T005, from : null to : null"}]},{"name":"Frank Müller","user_id":"U006","password":"admin123","hashed_password":"0192023a7bbd73250516f069df18b500","tickets_booked":[]},{"name":"Grace Kim","user_id":"U007","password":"welcome","hashed_password":"5d41402abc4b2a76b9719d911017c592","tickets_booked":[{"ticket_id":"T006","ticket_info":"ticketId : T006, from : null to : null"}]},{"name":"Hiro Tanaka","user_id":"U008","password":"letmein!","hashed_password":"6cb75f652a9b52798eb6cf2201057c73","tickets_booked":[{"ticket_id":"T007","ticket_info":"ticketId : T007, from : null to : null"}]},{"name":"Isabella Rossi","user_id":"U009","password":"passw0rd","hashed_password":"3f230640b78d1feb74e38a3a834f13b8","tickets_booked":[]},{"name":"Jack O’Connor","user_id":"U010","password":"secret!","hashed_password":"b2e98ad6f6eb8508dd6a14cfa704bad7","tickets_booked":[{"ticket_id":"T008","ticket_info":"ticketId : T008, from : null to : null"}]},{"name":"hello","user_id":"717eca1b-bd85-473f-9f6f-3be8032d9520","password":"world","hashed_password":"$2a$10$PmcoJC5pMznJS3e.cp02RuXepvUKJVgBsnQrzewYYuCADyRc0BKTK","tickets_booked":[]},{"name":"Kellogs","user_id":"29e29f5b-73f9-4a5d-be47-fe17a6fbc095","password":"Conflakes","hashed_password":"$2a$10$24UctkNeaiRSwiwjTqjr8.rMG0kTb3aC3zuSL80vrmF43OM2i7IHC","tickets_booked":[]},{"name":"kellogs","user_id":"f613b70d-15e5-4f85-9055-0fb43ebd9322","password":"Cornflakes","hashed_password":"$2a$10$am54C1d7aXm2WKRtPf8XuuauEW7k7bUcVDzi7IYu9pQy9427/fIEe","tickets_booked":[]}]
+[ {
+  "name" : "Alice Johnson",
+  "user_id" : "U001",
+  "password" : "pass123",
+  "hashed_password" : "5f4dcc3b5aa765d61d8327deb882cf99",
+  "tickets_booked" : [ {
+    "ticket_id" : "T001",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T001, from : null to : null"
+  } ]
+}, {
+  "name" : "Bob Smith",
+  "user_id" : "U002",
+  "password" : "qwerty",
+  "hashed_password" : "d8578edf8458ce06fbc5bb76a58c5ca4",
+  "tickets_booked" : [ {
+    "ticket_id" : "T002",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T002, from : null to : null"
+  } ]
+}, {
+  "name" : "Carol Lee",
+  "user_id" : "U003",
+  "password" : "letmein",
+  "hashed_password" : "0d107d09f5bbe40cade3de5c71e9e9b7",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "David Nguyen",
+  "user_id" : "U004",
+  "password" : "123456",
+  "hashed_password" : "e10adc3949ba59abbe56e057f20f883e",
+  "tickets_booked" : [ {
+    "ticket_id" : "T003",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T003, from : null to : null"
+  }, {
+    "ticket_id" : "T004",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T004, from : null to : null"
+  } ]
+}, {
+  "name" : "Eva Patel",
+  "user_id" : "U005",
+  "password" : "password1",
+  "hashed_password" : "7c6a180b36896a0a8c02787eeafb0e4c",
+  "tickets_booked" : [ {
+    "ticket_id" : "T005",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T005, from : null to : null"
+  } ]
+}, {
+  "name" : "Frank Müller",
+  "user_id" : "U006",
+  "password" : "admin123",
+  "hashed_password" : "0192023a7bbd73250516f069df18b500",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "Grace Kim",
+  "user_id" : "U007",
+  "password" : "welcome",
+  "hashed_password" : "5d41402abc4b2a76b9719d911017c592",
+  "tickets_booked" : [ {
+    "ticket_id" : "T006",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T006, from : null to : null"
+  } ]
+}, {
+  "name" : "Hiro Tanaka",
+  "user_id" : "U008",
+  "password" : "letmein!",
+  "hashed_password" : "6cb75f652a9b52798eb6cf2201057c73",
+  "tickets_booked" : [ {
+    "ticket_id" : "T007",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T007, from : null to : null"
+  } ]
+}, {
+  "name" : "Isabella Rossi",
+  "user_id" : "U009",
+  "password" : "passw0rd",
+  "hashed_password" : "3f230640b78d1feb74e38a3a834f13b8",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "Jack O’Connor",
+  "user_id" : "U010",
+  "password" : "secret!",
+  "hashed_password" : "b2e98ad6f6eb8508dd6a14cfa704bad7",
+  "tickets_booked" : [ {
+    "ticket_id" : "T008",
+    "user_id" : null,
+    "source" : null,
+    "destination" : null,
+    "date_of_travel" : null,
+    "train" : null,
+    "ticket_info" : "ticketId : T008, from : null to : null"
+  } ]
+}, {
+  "name" : "hello",
+  "user_id" : "717eca1b-bd85-473f-9f6f-3be8032d9520",
+  "password" : "world",
+  "hashed_password" : "$2a$10$PmcoJC5pMznJS3e.cp02RuXepvUKJVgBsnQrzewYYuCADyRc0BKTK",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "Kellogs",
+  "user_id" : "29e29f5b-73f9-4a5d-be47-fe17a6fbc095",
+  "password" : "Conflakes",
+  "hashed_password" : "$2a$10$24UctkNeaiRSwiwjTqjr8.rMG0kTb3aC3zuSL80vrmF43OM2i7IHC",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "kellogs",
+  "user_id" : "f613b70d-15e5-4f85-9055-0fb43ebd9322",
+  "password" : "Cornflakes",
+  "hashed_password" : "$2a$10$am54C1d7aXm2WKRtPf8XuuauEW7k7bUcVDzi7IYu9pQy9427/fIEe",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "summer",
+  "user_id" : "a6431565-c827-404e-84d2-27b3a988746d",
+  "password" : "land",
+  "hashed_password" : "$2a$10$L0es7rtixY.0UuKwifZhKuj4fGMTWFYB3FMhjt/a.oHpfTLq//SH.",
+  "tickets_booked" : [ ]
+}, {
+  "name" : "Picture",
+  "user_id" : "1198d79a-ce6a-4399-9636-4b140da9932e",
+  "password" : "Perfect",
+  "hashed_password" : "$2a$10$NXdorgQN/FH3JdAMT1.9yuWibX8shK7KWXYjcjZxTWqhwm0GwFjAe",
+  "tickets_booked" : [ ]
+} ]

@@ -9,10 +9,7 @@ import ticket.booking.util.UserServiceUtil;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class UserBookingService {
 
@@ -36,7 +33,8 @@ public class UserBookingService {
     public List<User> loadUsers() throws IOException {
         File users = new File(USERS_PATH);
         // we use TypeReference get the type of List<User> at runtime
-        return  objectMapper.readValue(users, new TypeReference<List<User>>(){});
+        return objectMapper.readValue(users, new TypeReference<List<User>>() {
+        });
     }
 
     public Boolean loginUser() {
@@ -46,18 +44,18 @@ public class UserBookingService {
         return foundUser.isPresent();
     }
 
-    public void signUp(User user1){
+    public void signUp(User user1) {
         try {
             userList.add((user1));
             saveUserListToFile();
-        } catch (IOException ex){
+        } catch (IOException ex) {
             System.out.println("User could not sign up");
         }
     }
 
-    public void saveUserListToFile() throws IOException{
+    public void saveUserListToFile() throws IOException {
         File userFile = new File(USERS_PATH);
-        objectMapper.writeValue(userFile, userList);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(userFile, userList);
     }
 
     public void fetchBooking() {
@@ -82,4 +80,34 @@ public class UserBookingService {
         }
     }
 
+    public void bookTicket(String trainNo,
+                           String trainId,
+                           Integer seatRow,
+                           Integer seatCol,
+                           String source,
+                           String destination) {
+        // This function books ticket for user from source to destination for a given train
+        // For now the function books the seats for the whole journey for the user
+        try {
+            TrainService trainService = new TrainService();
+            Optional<Train> train = trainService.bookTrainSeats(trainNo, trainId, seatRow, seatCol);
+            if (train.isEmpty()) {
+
+                return;
+            }
+            Ticket ticket = new Ticket(
+                    UUID.randomUUID().toString(),
+                    user.getUserId(),
+                    source,
+                    destination,
+                    new Date(),
+                    train.get()
+            );
+
+            user.addTicket(ticket);
+            saveUserListToFile();
+        } catch (IOException ignored) {
+            System.out.println("Something went wrong ! \n Ticket couldn't be booked");
+        }
+    }
 }

@@ -8,7 +8,7 @@ public class UserServiceUtil {
         return BCrypt.hashpw(originalPassword, BCrypt.gensalt());
     }
 
-    public static boolean checkPassword(String originalPassword, String hashedPassword){
+    public static boolean checkPassword(String originalPassword, String hashedPassword) {
         return BCrypt.checkpw(originalPassword, hashedPassword);
     }
 

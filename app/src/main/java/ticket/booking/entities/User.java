@@ -16,7 +16,7 @@ public class User {
     private String hashedPassword;
     private List<Ticket> ticketsBooked;
 
-    public User (String name, String userId, String hashedPassword, String password, List<Ticket> ticketsBooked){
+    public User(String name, String userId, String hashedPassword, String password, List<Ticket> ticketsBooked) {
         this.name = name;
         this.userId = userId;
         this.password = password;
@@ -24,51 +24,56 @@ public class User {
         this.ticketsBooked = ticketsBooked;
     }
 
-    public User(){}
+    public User() {
+    }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getUserId(){
+    public String getUserId() {
         return userId;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
-    public String getHashedPassword(){
+    public String getHashedPassword() {
         return hashedPassword;
     }
 
-    public void printTickets(){
+    public void printTickets() {
         for (Ticket ticket : ticketsBooked) {
             System.out.println(ticket.getTicketInfo());
         }
     }
 
-    public List<Ticket> getTicketsBooked(){
+    public List<Ticket> getTicketsBooked() {
         return this.ticketsBooked;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setUserId(String userId){
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public void setHashedPassword(String hashedPassword){
+    public void setHashedPassword(String hashedPassword) {
         this.hashedPassword = hashedPassword;
     }
 
-    public void setTicketsBooked(List<Ticket> ticketsBooked1){
+    public void setTicketsBooked(List<Ticket> ticketsBooked1) {
         this.ticketsBooked = ticketsBooked1;
+    }
+
+    public void addTicket(Ticket ticket) {
+        ticketsBooked.add(ticket);
     }
 }
